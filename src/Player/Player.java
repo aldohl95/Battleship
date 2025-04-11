@@ -4,7 +4,7 @@ import Main.Board;
 
 public abstract class Player {
 
-    private Board board = new Board();
+    public Board board = new Board();
 
     public Board getBoard() {
         return board;
