@@ -7,7 +7,7 @@ import java.util.*;
 public class Board {
 
     private int gsize = 10;
-    private int char[][] grid = new char[gsize][gsize];
+    private char[][] grid = new char[gsize][gsize];
     private List<Ship> ships = new ArrayList<>();
 
     //loops through each row of the grid and fills it with
