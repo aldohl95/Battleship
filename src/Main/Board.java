@@ -1,6 +1,5 @@
 package Main;
 import piece.Ship;
-
 import java.util.*;
 
 
@@ -91,12 +90,19 @@ public class Board {
     }
 
     public void print(boolean revealShips){
-        System.out.print(" ");
-        for(int i = 0; i < gsize; i++){
-            System.out.print(i + " ");
-            for(int j = 0; j< gsize; j++){
-                char c = grid[i][j];
-                if(!revealShips && c == 'S'){
+        System.out.print("  ");
+        for (int col = 0; col < gsize; col++) {
+            System.out.print(col + " ");
+        }
+        System.out.println();
+
+        for (int row = 0; row < gsize; row++) {
+            System.out.print(row + " ");
+            for (int col = 0; col < gsize; col++) {
+                char c = grid[row][col];
+                if (!revealShips && c == 'S') {
+                    System.out.print("~ ");
+                } else {
                     System.out.print(c + " ");
                 }
             }
