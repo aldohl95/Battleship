@@ -24,11 +24,16 @@ public class ComputerPlayer extends Player{
     @Override
     public void move(Player opponent) {
         int row, col;
-        do {
-            row = rand.nextInt(5);
-            col = rand.nextInt(5);
-        } while (!opponent.getBoard().attackHits(row, col));
 
+        row = rand.nextInt(10);
+        col = rand.nextInt(10);
         System.out.println("Computer attacks: " + row + ", " + col);
+
+        if (opponent.getBoard().attackHits(row, col)) {
+            System.out.println("Hit!");
+        } else {
+            System.out.println("Miss.");
+        }
+
     }
 }

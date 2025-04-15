@@ -13,10 +13,10 @@ public abstract class Ship {
     }
     //will take a starting position and whether the ship is going horizontal
     //or not
-    public void place(int row,int col, boolean horizontal){
+    public void place(int row,int col, boolean isHorizontol){
         this.row = row;
         this.col = col;
-        this.isHorizontol = horizontal;
+        this.isHorizontol = isHorizontol;
     }
 
     //determines if a ship is sunk
